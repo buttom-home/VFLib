@@ -33,8 +33,6 @@
 #ifndef VF_PERFORMEDATEXIT_VFHEADER
 #define VF_PERFORMEDATEXIT_VFHEADER
 
-#include "../containers/vf_LockFreeStack.h"
-
 /*============================================================================*/
 /** 
   Perform an action at program exit

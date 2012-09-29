@@ -73,8 +73,11 @@ struct GradientOverlayStyle
     {
     }
 
-    inline void operator() (int const x, int const y, int const t) const noexcept
+    template <class T>
+    inline void operator() (int const x, int const y, const T tp) const noexcept
     {
+      int t = int (tp);
+
       PixelARGB& dest (*((PixelARGB*)m_dest.getPixelPointer (x, y)));
       dest.getRed ()    = uint8 (t);
       dest.getGreen ()  = uint8 (t);

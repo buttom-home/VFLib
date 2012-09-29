@@ -424,39 +424,16 @@ namespace vf
 
 using namespace juce;
 
-// This group must come first since other files need it
+#include "threads/vf_SpinDelay.h"
+
 #include "memory/vf_Uncopyable.h"
-#include "diagnostic/vf_CatchAny.h"
-#include "diagnostic/vf_Debug.h"
-#include "diagnostic/vf_Error.h"
-#include "diagnostic/vf_FPUFlags.h"
-#include "diagnostic/vf_LeakChecked.h"
-#include "diagnostic/vf_SafeBool.h"
-#include "diagnostic/vf_Throw.h"
-
-#include "containers/vf_List.h"
-#include "containers/vf_LockFreeStack.h"
-#include "containers/vf_LockFreeQueue.h"
-#include "containers/vf_Map2D.h"
-#include "containers/vf_SharedTable.h"
-#include "containers/vf_SortedLookupTable.h"
-
-#include "events/vf_OncePerSecond.h"
-#include "events/vf_PerformedAtExit.h"
-
-#include "functor/vf_Bind.h"
-#include "functor/vf_Function.h"
-
-#include "math/vf_Interval.h"
-#include "math/vf_Math.h"
-#include "math/vf_MurmurHash.h"
-#include "math/vf_Vec3.h"
-
 #include "memory/vf_AtomicCounter.h"
 #include "memory/vf_AtomicFlag.h"
 #include "memory/vf_AtomicPointer.h"
 #include "memory/vf_AtomicState.h"
-
+#include "memory/vf_MemoryAlignment.h"
+#include "memory/vf_StaticObject.h"
+#include "memory/vf_RefCountedSingleton.h"
 #if VF_MSVC
 #pragma warning (push)
 #pragma warning (disable: 4100) // unreferenced formal parmaeter
@@ -467,13 +444,34 @@ using namespace juce;
 #pragma warning (pop)
 #endif
 
-#include "memory/vf_MemoryAlignment.h"
-#include "memory/vf_RefCountedSingleton.h"
-#include "memory/vf_StaticObject.h"
+#include "functor/vf_Bind.h"
+#include "functor/vf_Function.h"
+
+#include "containers/vf_List.h"
+#include "containers/vf_LockFreeStack.h"
+#include "containers/vf_LockFreeQueue.h"
+#include "containers/vf_Map2D.h"
+#include "containers/vf_SharedTable.h"
+#include "containers/vf_SortedLookupTable.h"
+
+#include "diagnostic/vf_CatchAny.h"
+#include "diagnostic/vf_Debug.h"
+#include "diagnostic/vf_SafeBool.h"
+#include "diagnostic/vf_Error.h"
+#include "diagnostic/vf_FPUFlags.h"
+#include "diagnostic/vf_LeakChecked.h"
+#include "diagnostic/vf_Throw.h"
+
+#include "events/vf_OncePerSecond.h"
+#include "events/vf_PerformedAtExit.h"
+
+#include "math/vf_Interval.h"
+#include "math/vf_Math.h"
+#include "math/vf_MurmurHash.h"
+#include "math/vf_Vec3.h"
 
 #include "threads/vf_Semaphore.h"
 #include "threads/vf_SerialFor.h"
-#include "threads/vf_SpinDelay.h"
 #include "threads/vf_InterruptibleThread.h"
 
 }

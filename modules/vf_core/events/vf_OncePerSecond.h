@@ -33,8 +33,6 @@
 #ifndef VF_ONCEPERSECOND_VFHEADER
 #define VF_ONCEPERSECOND_VFHEADER
 
-#include "../containers/vf_List.h"
-
 /*============================================================================*/
 /** 
     Provides a once per second notification.

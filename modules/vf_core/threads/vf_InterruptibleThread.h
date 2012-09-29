@@ -33,9 +33,6 @@
 #ifndef VF_INTERRUPTIBLETHREAD_VFHEADER
 #define VF_INTERRUPTIBLETHREAD_VFHEADER
 
-#include "../diagnostic/vf_SafeBool.h"
-#include "../functor/vf_Function.h"
-
 /*============================================================================*/
 /**
   A thread with soft interruption support.

@@ -41,7 +41,7 @@ bool isDebuggerAttached ()
 
 //------------------------------------------------------------------------------
 
-#if JUCE_DEBUG && defined (juce_breakDebugger)
+#if VF_DEBUG && defined (juce_breakDebugger)
 void breakPoint ()
 {
   if (isDebuggerAttached ())

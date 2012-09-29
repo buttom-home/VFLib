@@ -33,8 +33,6 @@
 #ifndef VF_LOCKFREESTACK_VFHEADER
 #define VF_LOCKFREESTACK_VFHEADER
 
-#include "../memory/vf_AtomicPointer.h"
-
 struct LockFreeStackDefaultTag;
 
 /*============================================================================*/

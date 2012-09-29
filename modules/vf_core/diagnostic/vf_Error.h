@@ -33,8 +33,6 @@
 #ifndef VF_ERROR_VFHEADER
 #define VF_ERROR_VFHEADER
 
-#include "vf_SafeBool.h"
-
 /**
   A concise error report.
 

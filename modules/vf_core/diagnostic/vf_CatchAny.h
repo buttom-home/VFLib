@@ -33,8 +33,6 @@
 #ifndef VF_CATCHANY_VFHEADER
 #define VF_CATCHANY_VFHEADER
 
-#include "../functor/vf_Function.h"
-
 /**
   Exception catcher.
 

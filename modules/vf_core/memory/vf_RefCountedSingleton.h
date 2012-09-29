@@ -33,9 +33,6 @@
 #ifndef VF_REFERENCECOUNTEDSINGLETON_VFHEADER
 #define VF_REFERENCECOUNTEDSINGLETON_VFHEADER
 
-#include "../events/vf_PerformedAtExit.h"
-#include "../memory/vf_StaticObject.h"
-
 /**
   Thread-safe singleton which comes into existence on first use. Use this
   instead of creating objects with static storage duration. These singletons

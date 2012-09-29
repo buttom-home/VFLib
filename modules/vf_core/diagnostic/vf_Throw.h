@@ -33,8 +33,6 @@
 #ifndef VF_THROW_VFHEADER
 #define VF_THROW_VFHEADER
 
-#include "vf_Debug.h"
-
 //
 // Throw an exception, with the opportunity to get a
 // breakpoint with the call stack before the throw.

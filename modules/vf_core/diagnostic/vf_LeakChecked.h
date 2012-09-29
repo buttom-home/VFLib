@@ -33,11 +33,6 @@
 #ifndef VF_LEAKCHECKED_VFHEADER
 #define VF_LEAKCHECKED_VFHEADER
 
-#include "vf_Error.h"
-#include "vf_Throw.h"
-#include "../memory/vf_StaticObject.h"
-#include "../containers/vf_LockFreeStack.h"
-
 //
 // Derived classes are automatically leak-checked on exit
 //
