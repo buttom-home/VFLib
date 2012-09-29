@@ -274,10 +274,11 @@
 #endif
 
 #ifndef VF_USE_LEAKCHECKED
-#define VF_USE_LEAKCHECKED JUCE_CHECK_MEMORY_LEAKS
+#define VF_USE_LEAKCHECKED VF_CHECK_MEMORY_LEAKS
 #endif
 
 /* Get this early so we can use it. */
+#include "native/vf_TargetPlatform.h"
 #include "modules/juce_core/system/juce_TargetPlatform.h"
 
 // Handy macro that lets pragma warnings be clicked in the output window
@@ -289,26 +290,26 @@
 // Turns vflib specific debugging support on or off
 //
 #ifndef VF_DEBUG
-#define VF_DEBUG JUCE_DEBUG // get the flag from Juce
+#define VF_DEBUG VF_DEBUG // get the flag from Juce
 #endif
 
 #if VF_USE_BOOST
 #include <boost/thread/tss.hpp>
 #endif
 
-#if JUCE_MSVC
+#if VF_MSVC
 # include <crtdbg.h>
 # include <functional>
-#elif JUCE_IOS
+#elif VF_IOS
 # if VF_USE_BOOST
 #  include <boost/bind.hpp>
 #  include <boost/function.hpp>
 # else
 #  include <tr1/functional>
 # endif
-#elif JUCE_MAC
+#elif VF_MAC
 # include <tr1/functional>
-#elif JUCE_LINUX
+#elif VF_LINUX
 # include <tr1/functional>
 #else
 # error Unnkown platform!
@@ -456,13 +457,13 @@ using namespace juce;
 #include "memory/vf_AtomicPointer.h"
 #include "memory/vf_AtomicState.h"
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (push)
 #pragma warning (disable: 4100) // unreferenced formal parmaeter
 #pragma warning (disable: 4355) // 'this' used in base member
 #endif
 #include "memory/vf_CacheLine.h"
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (pop)
 #endif
 

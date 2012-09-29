@@ -66,7 +66,7 @@ public:
   */
   GradientColours& operator= (GradientColours const& other);
 
-#if JUCE_COMPILER_SUPPORTS_MOVE_SEMANTICS
+#if VF_COMPILER_SUPPORTS_MOVE_SEMANTICS
   GradientColours (GradientColours&& other) noexcept;
   GradientColours& operator= (GradientColours&& other) noexcept;
 #endif

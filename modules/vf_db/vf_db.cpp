@@ -42,7 +42,7 @@
 
 #include "../vf_sqlite/vf_sqlite.h"
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (push)
 #pragma warning (disable: 4100) // unreferenced formal parmaeter
 #pragma warning (disable: 4355) // 'this' used in base member
@@ -71,6 +71,6 @@ namespace vf
 #include "source/use_type.cpp"
 }
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (pop)
 #endif

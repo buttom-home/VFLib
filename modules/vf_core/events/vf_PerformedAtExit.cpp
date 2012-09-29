@@ -69,7 +69,7 @@ PerformedAtExit::Performer::StackType PerformedAtExit::Performer::s_list;
 
 PerformedAtExit::PerformedAtExit ()
 {
-#if JUCE_IOS
+#if VF_IOS
   // TODO: PerformedAtExit::Performer::push_front crashes on iOS if s_storage is not accessed before used
   char *hack = PerformedAtExit::Performer::s_list.s_storage;
 #endif

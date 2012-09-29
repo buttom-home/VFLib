@@ -46,7 +46,7 @@
 #endif
 #endif
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma push_macro("_CRT_SECURE_NO_WARNINGS")
 #ifndef _CRT_SECURE_NO_WARNINGS
 #define _CRT_SECURE_NO_WARNINGS
@@ -72,7 +72,7 @@ extern "C"
 #undef LUA_CORE
 #undef LUA_LIB
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (push)
 #pragma warning (disable: 4244) /* Possible loss of data */
 #pragma warning (disable: 4702) /* Unreachable code */
@@ -121,7 +121,7 @@ extern "C"
 */
 #include "lua/loadlib.c"
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (pop)
 #endif
 
@@ -129,6 +129,6 @@ extern "C"
 }
 #endif
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma pop_macro("_CRT_SECURE_NO_WARNINGS")
 #endif

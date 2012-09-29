@@ -56,7 +56,7 @@
 #include "../vf_concurrent/vf_concurrent.h"
 #include "../vf_gui/vf_gui.h"
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (push)
 #pragma warning (disable: 4100) // unreferenced formal parameter
 //#pragma warning (disable: 4355) // 'this' : used in base member initializer list
@@ -90,7 +90,7 @@ namespace vf
 
 }
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (pop)
 #endif
 

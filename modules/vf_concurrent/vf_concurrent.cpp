@@ -40,7 +40,7 @@
 
 #include "vf_concurrent.h"
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (push)
 #pragma warning (disable: 4100) // unreferenced formal parmaeter
 #endif
@@ -68,6 +68,6 @@ namespace vf
 #include "threads/vf_GuiCallQueue.cpp"
 }
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (pop)
 #endif

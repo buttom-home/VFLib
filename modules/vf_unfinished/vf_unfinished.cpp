@@ -40,7 +40,7 @@
 
 #include "vf_unfinished.h"
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (push)
 //#pragma warning (disable: 4100) // unreferenced formal parmaeter
 //#pragma warning (disable: 4355) // 'this' used in base member
@@ -71,6 +71,6 @@ namespace vf
 
 }
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (pop)
 #endif

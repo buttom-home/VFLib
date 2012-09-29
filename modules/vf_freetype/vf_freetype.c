@@ -40,7 +40,7 @@
 
 #include "modules/juce_core/system/juce_TargetPlatform.h"
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (push)
 #pragma warning (disable: 4100)
 #endif
@@ -54,6 +54,6 @@ void z_error (char* message)
 
 #include "FreeTypeAmalgam/FreeTypeAmalgam.c"
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (pop)
 #endif

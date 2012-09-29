@@ -120,6 +120,7 @@ template<typename T>
 class conversion_use_type
   : private base_value_holder<T>
   , public use_type<typename type_conversion<T>::base_type>
+  , Uncopyable
 {
 public:
   typedef typename type_conversion<T>::base_type BASE_TYPE;
@@ -160,8 +161,6 @@ private:
   indicator m_own_ind;
   indicator& m_ind;
   bool m_bReadOnly;
-
-  JUCE_DECLARE_NON_COPYABLE (conversion_use_type);
 };
 
 template <typename T>

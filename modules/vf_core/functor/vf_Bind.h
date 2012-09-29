@@ -35,7 +35,7 @@
 
 /* Brings functional support into our namespace, based on environment.
 */
-#if JUCE_MSVC
+#if VF_MSVC
   // Visual Studio has these in std.
   using std::ref;
   using std::bind;
@@ -43,7 +43,7 @@
   using std::placeholders::_1;
   using std::placeholders::_2;
 
-#elif JUCE_IOS
+#elif VF_IOS
   #if VF_USE_BOOST
     /* If boost is activated, use it. This works
        around a bug with the iOS implementation of bind.
@@ -62,14 +62,14 @@
     using std::tr1::placeholders::_2;
   #endif
 
-#elif JUCE_MAC
+#elif VF_MAC
   using std::tr1::ref;
   using std::tr1::bind;
   using std::tr1::function;
   using std::tr1::placeholders::_1;
   using std::tr1::placeholders::_2;
 
-#elif JUCE_LINUX
+#elif VF_LINUX
   using std::tr1::bind;
   using std::tr1::placeholders::_1;
   using std::tr1::placeholders::_2;

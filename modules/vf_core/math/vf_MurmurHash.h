@@ -53,7 +53,7 @@ inline void Hash (const void* key, int len, uint32 seed, HashType* out)
   {
   case 32:  MurmurHash3_x86_32 (key, len, seed, out); break;
 
-#if JUCE_64BIT
+#if VF_64BIT
   case 128: MurmurHash3_x64_128 (key, len, seed, out); break;
 #else
   case 128: MurmurHash3_x86_128 (key, len, seed, out); break;

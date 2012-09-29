@@ -37,7 +37,7 @@
 //
 // Windows structured exception handling
 //
-#if JUCE_MSVC
+#if VF_MSVC
 
 #include <windows.h>
 

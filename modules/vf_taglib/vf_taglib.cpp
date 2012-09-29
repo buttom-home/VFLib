@@ -40,7 +40,7 @@
 
 #include "modules/juce_core/system/juce_TargetPlatform.h"
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (push)
 #pragma warning (disable: 4018) // signed/unsigned comparison mismatch
 #pragma warning (disable: 4309) // assignment truncates constant value
@@ -52,6 +52,6 @@
 
 #include "TagLibAmalgam/TagLibAmalgam.cpp"
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (pop)
 #endif

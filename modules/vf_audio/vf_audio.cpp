@@ -40,7 +40,7 @@
 
 #include "vf_audio.h"
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (push)
 #pragma warning (disable: 4100) // unreferenced formal parmaeter
 #endif
@@ -57,6 +57,6 @@ namespace vf
 
 }
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (pop)
 #endif

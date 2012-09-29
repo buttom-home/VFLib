@@ -53,7 +53,7 @@
 
 #include "modules/juce_gui_basics/juce_gui_basics.h"
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (push)
 #pragma warning (disable: 4100) // unreferenced formal parameter
 #pragma warning (disable: 4355) // 'this' : used in base member initializer list
@@ -86,7 +86,7 @@ namespace vf
 
 }
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (pop)
 #endif
 

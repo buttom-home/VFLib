@@ -86,7 +86,7 @@ public:
     return *this;
   }
 
-#if JUCE_COMPILER_SUPPORTS_MOVE_SEMANTICS
+#if VF_COMPILER_SUPPORTS_MOVE_SEMANTICS
   Pixels (Pixels&& other) noexcept
     : m_data (static_cast <Data::Ptr&&> (other.m_data))
   {

@@ -57,7 +57,7 @@
 
 #include "modules/juce_core/system/juce_TargetPlatform.h"
 
-#if JUCE_IOS || JUCE_MAC
+#if VF_IOS || VF_MAC
 # define VF_HAVE_NATIVE_SQLITE 1
 #else
 # define VF_HAVE_NATIVE_SQLITE 0

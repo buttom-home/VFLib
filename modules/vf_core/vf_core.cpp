@@ -42,11 +42,11 @@
 
 #include "modules/juce_gui_basics/juce_gui_basics.h"
 
-#if JUCE_MSVC && _DEBUG
+#if VF_MSVC && _DEBUG
 #include <crtdbg.h>
 #endif
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (push)
 #pragma warning (disable: 4100) // unreferenced formal parmaeter
 #pragma warning (disable: 4355) // 'this' used in base member
@@ -69,7 +69,7 @@ namespace vf
 #include "threads/vf_InterruptibleThread.cpp"
 #include "threads/vf_Semaphore.cpp"
 
-#if JUCE_WINDOWS
+#if VF_WINDOWS
 #include "native/vf_win32_FPUFlags.cpp"
 #include "native/vf_win32_Threads.cpp"
 
@@ -81,6 +81,6 @@ namespace vf
 
 }
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (pop)
 #endif

@@ -45,7 +45,7 @@
 
 #if ! (VF_USE_NATIVE_SQLITE && VF_HAVE_NATIVE_SQLITE)
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (push)
 #pragma warning (disable: 4127) /* conditional expression is constant */
 #pragma warning (disable: 4232) /* nonstandard extension used: dllimport address */
@@ -64,7 +64,7 @@
 #include "sqlite/sqlite3.c"
 #include "sqlite/sqlite3async.c"
 
-#if JUCE_MSVC
+#if VF_MSVC
 #pragma warning (pop)
 #endif
 

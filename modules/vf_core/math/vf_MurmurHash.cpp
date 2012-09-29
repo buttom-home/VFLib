@@ -41,7 +41,7 @@ namespace Murmur {
 
 // Microsoft Visual Studio
 
-#if JUCE_MSVC
+#if VF_MSVC
 
 #define FORCE_INLINE    __forceinline
 
