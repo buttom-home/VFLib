@@ -424,16 +424,26 @@ namespace vf
 
 using namespace juce;
 
+#include "memory/vf_Uncopyable.h"
+
+#include "functor/vf_Bind.h"
+#include "functor/vf_Function.h"
+
+#include "diagnostic/vf_CatchAny.h"
+#include "diagnostic/vf_Debug.h"
+#include "diagnostic/vf_SafeBool.h"
+#include "diagnostic/vf_Error.h"
+#include "diagnostic/vf_FPUFlags.h"
+#include "diagnostic/vf_Throw.h"
+
 #include "threads/vf_SpinDelay.h"
 
-#include "memory/vf_Uncopyable.h"
 #include "memory/vf_AtomicCounter.h"
 #include "memory/vf_AtomicFlag.h"
 #include "memory/vf_AtomicPointer.h"
 #include "memory/vf_AtomicState.h"
 #include "memory/vf_MemoryAlignment.h"
 #include "memory/vf_StaticObject.h"
-#include "memory/vf_RefCountedSingleton.h"
 #if VF_MSVC
 #pragma warning (push)
 #pragma warning (disable: 4100) // unreferenced formal parmaeter
@@ -444,9 +454,6 @@ using namespace juce;
 #pragma warning (pop)
 #endif
 
-#include "functor/vf_Bind.h"
-#include "functor/vf_Function.h"
-
 #include "containers/vf_List.h"
 #include "containers/vf_LockFreeStack.h"
 #include "containers/vf_LockFreeQueue.h"
@@ -454,16 +461,12 @@ using namespace juce;
 #include "containers/vf_SharedTable.h"
 #include "containers/vf_SortedLookupTable.h"
 
-#include "diagnostic/vf_CatchAny.h"
-#include "diagnostic/vf_Debug.h"
-#include "diagnostic/vf_SafeBool.h"
-#include "diagnostic/vf_Error.h"
-#include "diagnostic/vf_FPUFlags.h"
 #include "diagnostic/vf_LeakChecked.h"
-#include "diagnostic/vf_Throw.h"
 
 #include "events/vf_OncePerSecond.h"
 #include "events/vf_PerformedAtExit.h"
+
+#include "memory/vf_RefCountedSingleton.h"
 
 #include "math/vf_Interval.h"
 #include "math/vf_Math.h"
